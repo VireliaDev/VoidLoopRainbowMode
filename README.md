@@ -49,14 +49,6 @@ Drag **all files from the download** into the game folder.
 
 Allow Windows to merge folders if prompted.
 
-Final structure should look like:
-
-
-Voidloop Demo/
-BepInEx/
-winhttp.dll
-doorstop_config.ini
-
 
 ---
 
@@ -86,13 +78,11 @@ Rainbow Mode
 
 ### Mod not appearing
 
-- Make sure the **BepInEx console window** appears when launching the game.
 - Ensure you copied the files directly into the **game folder**, not inside another folder.
 
 ### Nothing happens when enabled
 
 - Restart the game after installing.
-- Make sure old versions of the mod are removed.
 
 ---
 
@@ -105,9 +95,9 @@ Rainbow Mode
 To uninstall, delete:
 
 
-BepInEx/
-winhttp.dll
-doorstop_config.ini
+-BepInEx/
+-winhttp.dll
+-doorstop_config.ini
 
 
 (or simply verify game files through Steam).
