@@ -3,6 +3,7 @@ using BepInEx;
 using HarmonyLib;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [BepInPlugin("virelia.voidloop.rainbowmode", "Rainbow Mode (Virelia)", "1.0")]
@@ -13,7 +14,18 @@ public class RainbowPlugin : BaseUnityPlugin
     private void Awake()
     {
         new Harmony("virelia.voidloop.rainbowmode").PatchAll();
+        SceneManager.sceneLoaded += OnSceneLoaded;
         StartCoroutine(Initialize());
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        created = false;
     }
 
     private IEnumerator Initialize()
@@ -31,6 +43,16 @@ public class RainbowPlugin : BaseUnityPlugin
             FindObjectsInactive.Include,
             FindObjectsSortMode.None
         );
+
+        // If the Rainbow row already exists in the current UI, don't add another
+        foreach (var b in binders)
+        {
+            if (b.settingFieldName == "rainbowMode" && b.gameObject.activeInHierarchy)
+            {
+                created = true;
+                return;
+            }
+        }
 
         foreach (var binder in binders)
         {
