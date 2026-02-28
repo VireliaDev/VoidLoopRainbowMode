@@ -4,6 +4,10 @@ Adds a **Rainbow Mode** toggle to the game's settings that overlays the screen w
 
 Made using **BepInEx**.
 
+## 📸 Preview
+
+![Rainbow Mode Screenshot](rainbowmode.png)
+
 ---
 
 ## ✨ Features
