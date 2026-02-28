@@ -16,60 +16,46 @@ Made using **BepInEx**.
 
 ## 📦 Requirements
 
-You must have:
-
 - **Voidloop Demo**
-- **BepInEx 5 (x64)**
 
-Download BepInEx here:
-
-👉 https://github.com/BepInEx/BepInEx/releases  
-
-Download:
-BepInEx_x64_5.x.x.zip
+No extra downloads required — **BepInEx is already included** in this release.
 
 ---
 
 ## 🔧 Installation
 
-### 1. Install BepInEx
+### 1. Download the Mod
+
+Download the latest release from the **Releases** page.
+
+Extract the downloaded `.zip`.
+
+---
+
+### 2. Install
 
 Open your game folder.
 
 **Steam users:**
-Steam Library
-→ Right click Voidloop Demo
-→ Manage
-→ Browse local files
 
-Extract the BepInEx zip into this folder.
+Steam Library  
+→ Right click **Voidloop Demo**  
+→ Manage  
+→ Browse local files  
 
-You should now see:
+---
+
+Drag **all files from the download** into the game folder.
+
+Allow Windows to merge folders if prompted.
+
+Final structure should look like:
+
+
 Voidloop Demo/
 BepInEx/
 winhttp.dll
 doorstop_config.ini
-
-
-Launch the game **once**, then close it.
-
-This creates the required folders.
-
----
-
-### 2. Install Rainbow Mode
-
-Download **RainbowMode.dll** from the Releases page.
-
-Place it into:
-Voidloop Demo/BepInEx/plugins/
-
-
-Final structure:
-Voidloop Demo/
-BepInEx/
-plugins/
-RainbowMode.dll
 
 
 ---
@@ -78,11 +64,17 @@ RainbowMode.dll
 
 Start the game normally.
 
+The BepInEx console should open automatically.
+
 Open:
-Settings → General:
+
+
+Settings → General
 
 
 Enable:
+
+
 Rainbow Mode
 
 
@@ -94,12 +86,13 @@ Rainbow Mode
 
 ### Mod not appearing
 
-- Make sure the **BepInEx console** opens when launching the game.
-- Check the DLL is inside the **plugins** folder, not the main folder.
+- Make sure the **BepInEx console window** appears when launching the game.
+- Ensure you copied the files directly into the **game folder**, not inside another folder.
 
 ### Nothing happens when enabled
 
-- Try restarting the game after installing.
+- Restart the game after installing.
+- Make sure old versions of the mod are removed.
 
 ---
 
@@ -109,9 +102,15 @@ Rainbow Mode
 - No gameplay changes.
 - Safe to remove at any time.
 
-To uninstall, simply delete:
-BepInEx/plugins/RainbowMode.dll
+To uninstall, delete:
 
+
+BepInEx/
+winhttp.dll
+doorstop_config.ini
+
+
+(or simply verify game files through Steam).
 
 ---
 
